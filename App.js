@@ -13,9 +13,9 @@ function App() {
   async function fetchUsers() {
     try {
       const { data } = await axios.get(
-        "https://randomuser.me/api/?gender=female&results=50"
+        "https://api.jikan.moe/v3/top/characters/1"
       );
-      setUsers(data.results);
+      setUsers(data.top);
     } catch (error) {
       console.log(error);
       Alert.alert("error getting users", "", [
